@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils'
 import { ModalProvider } from '@/components/providers/modal-provider'
 import { SocketProvider } from '@/components/providers/socket-provider'
 import { QueryProvider } from '@/components/providers/query-provider'
-import Head from 'next/head'
 const font = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -26,9 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      
       <html lang="en" suppressHydrationWarning>
         <body className={cn(
           font.className,
